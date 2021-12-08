@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Krisp`,
+    title: `Granada Labs`,
     description: `A Clean, Minimal and Responsive Site`,
     author: `@mohanmonu777`,
   },

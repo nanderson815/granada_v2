@@ -3,26 +3,47 @@ import ServiceItem from "../components/ServiceItem"
 import { useStaticQuery, graphql } from "gatsby"
 
 function Services() {
-  const { allServicesYaml } = useStaticQuery(graphql`
+  const { allServicesYaml, icons } = useStaticQuery(graphql`
     {
       allServicesYaml {
         edges {
           node {
             title
-            src
+            desc
+            index
+          }
+        }
+      }
+      icons: allFile(filter: { relativeDirectory: { eq: "icons" } }) {
+        nodes {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid
+            }
           }
         }
       }
     }
   `)
+  const images = icons.nodes
   return (
-    <div id = "services" className="container-fluid" style={{ backgroundColor: "#FFCD6C" }}>
+    <div
+      id="services"
+      className="container-fluid"
+      style={{ backgroundColor: "#FFCD6C" }}
+    >
       <div className="container">
         <div className="flexbox">
-          <h1 className="text-center my-5">Services We Offer </h1>
+          <h1 className="text-center my-5">What we make</h1>
           <div className="row">
             {allServicesYaml.edges.map(({ node }) => {
-              return <ServiceItem title={node.title} src={node.src} />
+              return (
+                <ServiceItem
+                  title={node.title}
+                  src={images[node.index]}
+                  desc={node.desc}
+                />
+              )
             })}
           </div>
         </div>
