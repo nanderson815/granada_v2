@@ -3,9 +3,10 @@ import "../global.css"
 import SEO from "../components/SEO"
 import LandingPage from "../subpages/LandingPage"
 import Services from "../subpages/Services"
-import Team from "../subpages/Team"
+import Offers from "../subpages/Offers"
 import End from "../subpages/End"
 import Footer from "../components/Footer"
+import Spotlight from "../subpages/Spotlight"
 
 function Index() {
   return (
@@ -13,7 +14,8 @@ function Index() {
       <SEO />
       <LandingPage />
       <Services />
-      <Team />
+      <Offers />
+      <Spotlight />
       <End />
       <Footer />
     </div>

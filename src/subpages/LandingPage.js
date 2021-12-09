@@ -2,6 +2,7 @@ import React from "react"
 import Navbar from "../components/Navbar"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import Background from "../images/moroccan-flower-dark.png"
+import AnchorLink from "react-anchor-link-smooth-scroll"
 
 function LandingPage() {
   const { pageDataYaml, background } = useStaticQuery(graphql`
@@ -46,22 +47,30 @@ function LandingPage() {
   }
 
   return (
-    <section id="home" style={pageStyle} className="container-fluid">
+    <div style={pageStyle}>
       <Navbar />
-      <div className="container">
-        <div className="centerItems">
-          <h6 style={welcomeStyle}>{welcomeText}</h6>
-          <h1>{landingText}</h1>
-          <button
-            style={buttonStyle}
-            type="button"
-            class="btn btn-primary btn-lg"
-          >
-            What We Do
-          </button>
+      <section id="home" className="container-fluid">
+        <div className="container">
+          <div className="centerItems">
+            <h6 style={welcomeStyle}>{welcomeText}</h6>
+            <h1>{landingText}</h1>
+            <AnchorLink
+              style={{ width: 200 }}
+              class="nav-link"
+              href="#services"
+            >
+              <button
+                style={buttonStyle}
+                type="button"
+                class="btn btn-primary btn-lg"
+              >
+                What We Make
+              </button>
+            </AnchorLink>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   )
 }
 

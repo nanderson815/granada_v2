@@ -30,11 +30,11 @@ function Services() {
     <div
       id="services"
       className="container-fluid"
-      style={{ backgroundColor: "#FFCD6C" }}
+      style={{ backgroundColor: "#d3d3d347", color: "black" }}
     >
       <div className="container">
         <div className="flexbox">
-          <h1 className="text-center my-5">What we make</h1>
+          <h1 className="text-center my-5">What We Make</h1>
           <div className="row">
             {allServicesYaml.edges.map(({ node }) => {
               return (

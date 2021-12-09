@@ -23,8 +23,8 @@ function Navbar() {
               </AnchorLink>
             </li>
             <li class="nav-item">
-              <AnchorLink class="nav-link" href="#team">
-                Team
+              <AnchorLink class="nav-link" href="#contact">
+                Contact
               </AnchorLink>
             </li>
           </ul>
