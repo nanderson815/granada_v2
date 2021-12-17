@@ -48,6 +48,17 @@ const buttonStyle = {
   fontWeight: "400",
 }
 
+const inputSwitcher = displayType => {
+  switch (displayType) {
+    case "textArea":
+      return 'textarea'
+    case "text":
+      return 'input'
+    default:
+      return 'input'
+  }
+}
+
 export default function End() {
   return (
     <div
@@ -70,6 +81,7 @@ export default function End() {
               <div className="form-row">
                 {formFields.map(
                   ({ formName, id, required, type, fullWidth }) => {
+                    const Switched = inputSwitcher(type)
                     return (
                       <div
                         key={id}
@@ -78,23 +90,14 @@ export default function End() {
                         }`}
                       >
                         <label htmlFor="firstName">{formName}</label>
-                        {type === "textArea" ? (
-                          <textarea
-                            type={type}
-                            className="form-control"
-                            id={id}
-                            placeholder={formName}
-                            required={required}
-                          />
-                        ) : (
-                          <input
-                            type={type}
-                            className="form-control"
-                            id={id}
-                            placeholder={formName}
-                            required={required}
-                          />
-                        )}
+                        <Switched
+                          type={type}
+                          className="form-control"
+                          id={id}
+                          name={id}
+                          placeholder={formName}
+                          required={required}
+                        />
                       </div>
                     )
                   }
