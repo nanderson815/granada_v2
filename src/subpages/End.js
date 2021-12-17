@@ -3,35 +3,35 @@ import Fade from "react-reveal/Fade"
 
 const formFields = [
   {
-    formName: "First Name",
+    name: "First Name",
     id: "firstName",
     required: true,
     type: "text",
     fullWidth: false,
   },
   {
-    formName: "Last Name",
+    name: "Last Name",
     id: "lastName",
     required: true,
     type: "text",
     fullWidth: false,
   },
   {
-    formName: "Email",
+    name: "Email",
     id: "emal",
     required: true,
     type: "text",
     fullWidth: false,
   },
   {
-    formName: "Company",
+    name: "Company",
     id: "company",
     required: true,
     type: "text",
     fullWidth: false,
   },
   {
-    formName: "What can we help you make?",
+    name: "What can we help you make?",
     id: "task",
     required: true,
     type: "textArea",
@@ -51,11 +51,11 @@ const buttonStyle = {
 const inputSwitcher = displayType => {
   switch (displayType) {
     case "textArea":
-      return 'textarea'
+      return "textarea"
     case "text":
-      return 'input'
+      return "input"
     default:
-      return 'input'
+      return "input"
   }
 }
 
@@ -79,29 +79,27 @@ export default function End() {
               <input type="hidden" name="bot-field" />
               <input type="hidden" name="form-name" value="contact" />
               <div className="form-row">
-                {formFields.map(
-                  ({ formName, id, required, type, fullWidth }) => {
-                    const Switched = inputSwitcher(type)
-                    return (
-                      <div
-                        key={id}
-                        className={`${
-                          fullWidth ? "col-md-12 mb-3" : "col-md-6 mb-3"
-                        }`}
-                      >
-                        <label htmlFor="firstName">{formName}</label>
-                        <Switched
-                          type={type}
-                          className="form-control"
-                          id={id}
-                          name={id}
-                          placeholder={formName}
-                          required={required}
-                        />
-                      </div>
-                    )
-                  }
-                )}
+                {formFields.map(({ name, id, required, type, fullWidth }) => {
+                  const Switched = inputSwitcher(type)
+                  return (
+                    <div
+                      key={id}
+                      className={`${
+                        fullWidth ? "col-md-12 mb-3" : "col-md-6 mb-3"
+                      }`}
+                    >
+                      <label htmlFor={name}>{name}</label>
+                      <Switched
+                        type={type}
+                        className="form-control"
+                        id={id}
+                        name={id}
+                        placeholder={name}
+                        required={required}
+                      />
+                    </div>
+                  )
+                })}
               </div>
               <button
                 style={buttonStyle}
