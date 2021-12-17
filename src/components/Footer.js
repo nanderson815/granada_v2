@@ -1,10 +1,10 @@
 import React from "react"
-import { SocialIcon } from "react-social-icons"
+// import { SocialIcon } from "react-social-icons"
 
 function Footer() {
   return (
     <div>
-      <footer className="py-2" style={{ backgroundColor: "#5E35B1" }}>
+      <footer className="py-2" style={{ backgroundColor: "#1c305c" }}>
         <div className="container">
           <p className="float-right">Krisp | © Copyright 2019</p>
           <p>
@@ -26,13 +26,13 @@ function Footer() {
               www.flaticon.com
             </a>{" "}
             is licensed by{" "}
-            <a
+            {/* <a
               href="http://creativecommons.org/licenses/by/3.0/"
               title="Creative Commons BY 3.0"
               target="_blank"
             >
               CC 3.0 BY
-            </a>
+            </a> */}
             <br />
             <br />
           </div>

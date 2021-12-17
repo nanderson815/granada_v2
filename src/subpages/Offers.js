@@ -26,7 +26,7 @@ function Offers() {
           <h1 className="text-center my-5">How We Can Help</h1>
           <div className="row mb-5">
             {allOfferingsYaml?.edges?.map(({ node }) => {
-              return <OfferingItem title={node.name} desc={node.desc} />
+              return <OfferingItem key={node.name} title={node.name} desc={node.desc} />
             })}
           </div>
         </div>

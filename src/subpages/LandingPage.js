@@ -1,11 +1,11 @@
 import React from "react"
 import Navbar from "../components/Navbar"
-import { useStaticQuery, graphql, Link } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 import Background from "../images/moroccan-flower-dark.png"
 import AnchorLink from "react-anchor-link-smooth-scroll"
 
 function LandingPage() {
-  const { pageDataYaml, background } = useStaticQuery(graphql`
+  const { pageDataYaml } = useStaticQuery(graphql`
     {
       pageDataYaml {
         welcomeText
@@ -56,13 +56,13 @@ function LandingPage() {
             <h1>{landingText}</h1>
             <AnchorLink
               style={{ width: 200 }}
-              class="nav-link"
+              className="nav-link"
               href="#services"
             >
               <button
                 style={buttonStyle}
                 type="button"
-                class="btn btn-primary btn-lg"
+                className="btn btn-primary btn-lg"
               >
                 What We Make
               </button>

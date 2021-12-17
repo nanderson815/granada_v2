@@ -39,6 +39,7 @@ function Services() {
             {allServicesYaml.edges.map(({ node }) => {
               return (
                 <ServiceItem
+                  key={node.index}
                   title={node.title}
                   src={images[node.index]}
                   desc={node.desc}
