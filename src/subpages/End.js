@@ -18,7 +18,7 @@ const formFields = [
   },
   {
     name: "Email",
-    id: "emal",
+    id: "email",
     required: true,
     type: "text",
     fullWidth: false,
