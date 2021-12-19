@@ -1,8 +1,16 @@
 module.exports = {
   siteMetadata: {
     title: `Granada Labs`,
-    description: `A Clean, Minimal and Responsive Site`,
-    author: `@mohanmonu777`,
+    description: `A digital software company in Atlanta, GA.`,
+    author: `@nanderson815`,
+    keywords: [
+      "software development",
+      "web design",
+      "software",
+      "engineering",
+      "app development",
+    ],
+    siteUrl: "https://granadalabs.io/",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -18,13 +26,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-krisp`,
-        short_name: `krisp`,
+        name: `Granada Labs`,
+        short_name: `Granada`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`,
+        icon: `src/images/icon.png`,
       },
     },
     `gatsby-transformer-yaml`,

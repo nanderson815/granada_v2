@@ -14,11 +14,11 @@ function Navbar() {
   return (
     <div className="pos-f-t">
       <FocusTrap active={open}>
-        <div id="myNav" class="overlay" style={{ height: open && "100%" }}>
-          <button class="closebtn" onClick={() => setOpen(false)}>
+        <div id="myNav" className="overlay" style={{ height: open && "100%" }}>
+          <button className="closebtn" onClick={() => setOpen(false)}>
             &times;
           </button>
-          <div class="overlay-content">
+          <div className="overlay-content">
             <div className="nav-item active">
               <AnchorLink
                 offset={() => 500}
