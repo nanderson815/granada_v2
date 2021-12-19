@@ -5,7 +5,6 @@ import "./Navbar.css"
 
 const textStyle = {
   color: "white",
-  fontWeight: "600",
   letterSpacing: "0.1em",
 }
 
