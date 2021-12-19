@@ -4,7 +4,7 @@ import SEO from "../components/SEO"
 import LandingPage from "../subpages/LandingPage"
 import Services from "../subpages/Services"
 import Offers from "../subpages/Offers"
-import End from "../subpages/End"
+import Contact from "../subpages/Contact"
 import Footer from "../components/Footer"
 import Spotlight from "../subpages/Spotlight"
 
@@ -16,7 +16,7 @@ function Index() {
       <Services />
       <Offers />
       <Spotlight />
-      <End />
+      <Contact />
       <Footer />
     </div>
   )

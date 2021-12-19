@@ -62,7 +62,8 @@ const inputSwitcher = displayType => {
 export default function End() {
   return (
     <div
-      className="container-fluid"
+      className="container-fluid py-5"
+      id="contact"
       style={{ backgroundColor: "#184478", color: "white" }}
     >
       <div className="container">

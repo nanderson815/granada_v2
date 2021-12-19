@@ -18,7 +18,7 @@ function Offers() {
   return (
     <div
       id="offers"
-      className="container-fluid"
+      className="container-fluid py-5"
       style={{ backgroundColor: "white" }}
     >
       <div className="container">

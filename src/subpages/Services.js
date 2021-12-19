@@ -29,7 +29,7 @@ function Services() {
   return (
     <div
       id="services"
-      className="container-fluid"
+      className="container-fluid py-5"
       style={{ backgroundColor: "#d3d3d347", color: "black" }}
     >
       <div className="container">
@@ -43,7 +43,7 @@ function Services() {
                   title={node.title}
                   src={images[node.index]}
                   desc={node.desc}
-                />
+                />  
               )
             })}
           </div>

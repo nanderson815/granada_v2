@@ -36,13 +36,12 @@ function LandingPage() {
   }
 
   const buttonStyle = {
-    width: "200px",
+    width: "100%",
     border: "1px solid",
     background: "#b02a37",
     borderRadius: "30px",
     textTransform: "uppercase",
     color: "white",
-    fontWeight: "600",
     marginTop: "20px",
   }
 
@@ -54,19 +53,17 @@ function LandingPage() {
           <div className="centerItems">
             <h6 style={welcomeStyle}>{welcomeText}</h6>
             <h1>{landingText}</h1>
-            <AnchorLink
-              style={{ width: 200 }}
-              className="nav-link"
-              href="#services"
-            >
-              <button
-                style={buttonStyle}
-                type="button"
-                className="btn btn-primary btn-lg"
-              >
-                What We Make
-              </button>
-            </AnchorLink>
+            <div style={{ width: 300 }}>
+              <AnchorLink className="nav-link" href="#services" tabIndex="-1">
+                <button
+                  style={buttonStyle}
+                  type="button"
+                  className="btn btn-primary btn-lg"
+                >
+                  What We Make
+                </button>
+              </AnchorLink>
+            </div>
           </div>
         </div>
       </section>
