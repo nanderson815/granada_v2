@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Granada Labs`,
-    description: `A digital software company in Atlanta, GA.`,
+    description: `Granada Labs is a digital engineering and software company based in Atlanta, GA. We create custom apps and software that will delight your users.`,
     author: `@nanderson815`,
     keywords: [
       "software development",

@@ -11,7 +11,7 @@ import Spotlight from "../subpages/Spotlight"
 function Index() {
   return (
     <div>
-      <SEO />
+      <SEO title="Digital Engineering in Atlanta, GA" />
       <LandingPage />
       <Services />
       <Offers />
