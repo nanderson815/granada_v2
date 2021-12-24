@@ -19,7 +19,8 @@ const logoCont = {
 
 const iconStyle = {
   display: "inline-block",
-  width: 40,
+  width: 55,
+  margin: "-10px -5px",
 }
 
 function Navbar() {
