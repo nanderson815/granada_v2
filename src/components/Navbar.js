@@ -1,15 +1,41 @@
 import React, { useState } from "react"
 import AnchorLink from "react-anchor-link-smooth-scroll"
+import Img from "gatsby-image"
+import { useStaticQuery, graphql } from "gatsby"
 import FocusTrap from "focus-trap-react"
 import "./Navbar.css"
 
 const textStyle = {
   color: "white",
   letterSpacing: "0.1em",
+  display: "inline-block",
+  margin: 0,
+}
+
+const logoCont = {
+  display: "flex",
+  alignItems: "center",
+}
+
+const iconStyle = {
+  display: "inline-block",
+  width: 40,
 }
 
 function Navbar() {
   const [open, setOpen] = useState(false)
+
+  const { icon } = useStaticQuery(graphql`
+    {
+      icon: file(relativePath: { eq: "icon.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
 
   return (
     <div className="pos-f-t">
@@ -53,7 +79,14 @@ function Navbar() {
 
       <nav className="navbar navbar-dark">
         <div className="container">
-          <h4 style={textStyle}>Granada Labs</h4>
+          <div style={logoCont}>
+            <Img
+              style={iconStyle}
+              fluid={icon.childImageSharp.fluid}
+              alt="Granada Labs Logo"
+            />
+            <h4 style={textStyle}>Granada Labs</h4>
+          </div>
           <button
             className="navbar-toggler"
             type="button"
