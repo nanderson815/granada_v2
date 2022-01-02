@@ -34,19 +34,19 @@ function Footer() {
     <div>
       <footer className="py-2" style={{ backgroundColor: "#1c305c" }}>
         <div className="container">
-          <div class="row">
-            <div class="col-lg-4 my-2 col-sm-12">
+          <div className="row">
+            <div className="col-lg-4 my-2 col-sm-12">
               <p style={rowHeaderStyle}>
                 Granada Labs | © Copyright {new Date(Date.now()).getFullYear()}
               </p>
             </div>
-            <div class="col-lg-4 my-2 col-sm-12">
+            <div className="col-lg-4 my-2 col-sm-12">
               <p style={textStyle}>Contact Us</p>
               <a href="mailto:contact@granadalabs.io">contact@granadalabs.io</a>
               <br />
               <a href="tel:17708155143">+ 1 (770) 815 5143</a>
             </div>
-            <div class="col-lg-4 my-2 col-sm-12">
+            <div className="col-lg-4 my-2 col-sm-12">
               <p style={textStyle}>Social Media</p>
               <a href="https://www.instagram.com/granada_labs/">
                 <Img

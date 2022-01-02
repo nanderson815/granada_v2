@@ -1,19 +1,19 @@
 import React from "react"
 import Navbar from "../components/Navbar"
 import { useStaticQuery, graphql } from "gatsby"
-import Background from "../images/moroccan-flower-dark.png"
 import AnchorLink from "react-anchor-link-smooth-scroll"
+import BackgroundImage from "gatsby-background-image"
 
 function LandingPage() {
-  const { pageDataYaml } = useStaticQuery(graphql`
+  const { pageDataYaml, background } = useStaticQuery(graphql`
     {
       pageDataYaml {
         welcomeText
         landingText
       }
-      background: file(name: { eq: "moroccan-flower-dark" }) {
+      background: file(relativePath: { eq: "moroccan-flower-dark.png" }) {
         childImageSharp {
-          fluid(maxWidth: 400, maxHeight: 250) {
+          fluid {
             ...GatsbyImageSharpFluid
           }
         }
@@ -23,12 +23,10 @@ function LandingPage() {
 
   const { welcomeText, landingText } = pageDataYaml
 
-  console.log(Background)
-
   const pageStyle = {
-    backgroundImage: `url(${Background})`,
+    backgroundRepeat: "repeat",
+    backgroundSize: "200",
     color: "white",
-    backgroundBlendMode: "multiply",
   }
 
   const welcomeStyle = {
@@ -46,7 +44,7 @@ function LandingPage() {
   }
 
   return (
-    <div style={pageStyle}>
+    <BackgroundImage style={pageStyle} fluid={background.childImageSharp.fluid}>
       <Navbar />
       <section id="home" className="container-fluid">
         <div className="container">
@@ -67,7 +65,7 @@ function LandingPage() {
           </div>
         </div>
       </section>
-    </div>
+    </BackgroundImage>
   )
 }
 
