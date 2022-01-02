@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import AnchorLink from "react-anchor-link-smooth-scroll"
 import Img from "gatsby-image"
 import { useStaticQuery, graphql } from "gatsby"
@@ -37,6 +37,14 @@ function Navbar() {
       }
     }
   `)
+
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden"
+    } else {
+      document.body.style.overflow = "unset"
+    }
+  }, [open])
 
   return (
     <div className="pos-f-t">
