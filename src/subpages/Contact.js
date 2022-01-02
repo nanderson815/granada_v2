@@ -70,6 +70,7 @@ export default function End() {
         <div className="flexbox">
           <Fade left>
             <h1 className="text-center my-5">Contact Us</h1>
+            <p>Please fill out the form to schedule a free 15 minute consultation</p>
             <form
               method="post"
               netlify-honeypot="bot-field"
