@@ -3,7 +3,6 @@ import Img from "gatsby-image"
 import Fade from "react-reveal/Fade"
 
 function ServiceItem({ src, title, desc, width = 3, blue }) {
-  console.log(src);
   return (
     <Fade bottom>
       <div

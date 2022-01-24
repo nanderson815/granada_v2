@@ -36,7 +36,6 @@ function Services() {
     }
   `)
   const images = icons.nodes
-  console.log(images)
   return (
     <div
       id="services"
