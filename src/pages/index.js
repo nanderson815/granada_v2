@@ -7,6 +7,7 @@ import Offers from "../subpages/Offers"
 import Contact from "../subpages/Contact"
 import Footer from "../components/Footer"
 import Spotlight from "../subpages/Spotlight"
+import Spacer from "../components/Spacer"
 
 function Index() {
   return (
@@ -14,6 +15,7 @@ function Index() {
       <SEO title="Digital Engineering in Atlanta, GA" />
       <LandingPage />
       <Services />
+      <Spacer body="We hand-craft digital solutions right here in Atlanta, Georgia with the mission of making cutting edge technology accessible to businesses of all sizes." />
       <Offers />
       <Spotlight />
       <Contact />

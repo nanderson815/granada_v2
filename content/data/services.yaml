@@ -1,12 +1,12 @@
 - title: Web Apps
   desc: Blazing fast, modern browser applications that run on any device
-  index: 1
+  index: 4
 - title: Mobile Apps
   desc: Cross-platform applications with a single code base for every platform
-  index: 3
+  index: 6
 - title: Cloud Apps
   desc: Advanced software that automatically scales with your buisiness
-  index: 2
+  index: 5
 - title: APIs
   desc: Access, transform, and share your data accross your organization
-  index: 0
+  index: 3
