@@ -10,7 +10,7 @@ function Services() {
           node {
             title
             desc
-            index
+            image
           }
         }
       }
@@ -19,7 +19,7 @@ function Services() {
           node {
             title
             desc
-            index
+            image
           }
         }
       }
@@ -28,6 +28,7 @@ function Services() {
           childImageSharp {
             fluid(maxWidth: 800) {
               ...GatsbyImageSharpFluid
+              originalName
             }
           }
         }
@@ -35,6 +36,7 @@ function Services() {
     }
   `)
   const images = icons.nodes
+  console.log(images)
   return (
     <div
       id="services"
@@ -50,7 +52,10 @@ function Services() {
                 <ServiceItem
                   key={node.index}
                   title={node.title}
-                  src={images[node.index]}
+                  src={images.find(
+                    image =>
+                      image.childImageSharp.fluid.originalName === node.image
+                  )}
                   desc={node.desc}
                 />
               )
@@ -67,7 +72,10 @@ function Services() {
                 <ServiceItem
                   key={node.index}
                   title={node.title}
-                  src={images[node.index]}
+                  src={images.find(
+                    image =>
+                      image.childImageSharp.fluid.originalName === node.image
+                  )}
                   desc={node.desc}
                   width={4}
                   blue={true}

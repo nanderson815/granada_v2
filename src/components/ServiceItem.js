@@ -3,6 +3,7 @@ import Img from "gatsby-image"
 import Fade from "react-reveal/Fade"
 
 function ServiceItem({ src, title, desc, width = 3, blue }) {
+  console.log(src);
   return (
     <Fade bottom>
       <div
@@ -22,7 +23,7 @@ function ServiceItem({ src, title, desc, width = 3, blue }) {
                 : "invert(28%) sepia(98%) saturate(1417%) hue-rotate(329deg) brightness(70%) contrast(96%)",
             }}
           >
-            <Img fluid={src.childImageSharp.fluid} />
+            <Img fluid={src?.childImageSharp?.fluid} />
           </div>
           <div className="card-body">
             <div className="card-title">
